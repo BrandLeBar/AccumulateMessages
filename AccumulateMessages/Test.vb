@@ -118,7 +118,7 @@ Class Test
         Console.WriteLine(Actual)
         Console.ForegroundColor = textcolor
         Console.WriteLine()
-        'Console.WriteLine(StrDup(15, "*"))
+        Console.WriteLine(StrDup(15, "*"))
         Console.ForegroundColor = ConsoleColor.White
 
     End Function

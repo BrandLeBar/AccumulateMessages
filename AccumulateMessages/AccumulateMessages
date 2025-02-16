@@ -1,0 +1,31 @@
+'Brandon Barrera
+'Spring 2025
+'RCET2265
+'Accumulate Messages
+'https://github.com/BrandLeBar/AccumulateMessages.git
+
+Imports System
+Imports System.Runtime.InteropServices
+Imports System.Security.Cryptography.X509Certificates
+
+Module MessageProgram
+    Sub Main(args As String())
+        'uncomment to test interactively
+        'Test.Manual()
+        Test.Auto()
+    End Sub
+
+    Function UserMessages(ByVal newMessage As String, ByVal clear As Boolean) As String
+        Static messages As New Text.StringBuilder()
+        If clear Then
+            messages.Clear()
+        ElseIf newMessage = "" Then
+            'nothing happens here
+        ElseIf newMessage <> "" Then
+            messages.AppendLine(newMessage)
+        End If
+        Return messages.ToString()
+    End Function
+
+
+End Module
